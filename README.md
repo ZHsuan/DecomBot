@@ -26,7 +26,7 @@ from start time: 1610938942 (  0s)
 Split bag file during 250s~550s (pipe):  
 rosbag filter [input.bag] [output.bag] "t.secs >= 1610939191 and t.secs <= 1610939492"
 
-## run RTAB-Map with DecomBot bag file
+## Run RTAB-Map with DecomBot bag file
 1. run RTAB-Map  
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
@@ -42,7 +42,7 @@ roslaunch registration.launch
 3. run rosbag  
 rosbag play --clock [bag file]
 
-## change 3D reconstruction
+## Change 3D reconstruction
 rtabmap-databaseViewer ~/.ros/rtabmap.db
 
 

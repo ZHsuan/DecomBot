@@ -43,11 +43,11 @@ rtabmap-databaseViewer ~/.ros/rtabmap.db
 
 
 # Discussion and problems
-1. accumulated errors
+1. Accumulated errors  
 Odometry errors will accumulate as time pass by, it may need other odometry methods or seperate a long process to several short ones.  
-2. lose tracking
+2. Lose tracking  
 RTAB-Map will lose tracking in sometimes, causing 3D reconstruction stopped.
-3. meshing
+3. Meshing  
 Meshing results depend on the parameters and methods. It can be improved by change paramters provided by RTAB-Map or use PCL.
 
 

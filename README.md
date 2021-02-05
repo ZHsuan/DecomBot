@@ -23,7 +23,11 @@ Split bag file during 250s~550s (pipe):
 rosbag filter [input.bag] [output.bag] "t.secs >= 1610939191 and t.secs <= 1610939492"
 
 ## Execute
-1. run RTAB-Map  
+1. run RTAB-Map with registration
+roslaunch rtabmap_registeration.launch
+
+(or run launch file seperately if needed)
+(1) run RTAB-Map  
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
     depth_topic:=/depth_registered/image_rect \
@@ -31,11 +35,10 @@ roslaunch rtabmap_ros rtabmap.launch \
     camera_info_topic:=/camera/color/camera_info \
     approx_sync:=true \
     use_sim_time:=true
-
-2. run registration   
+(2) run registration   
 roslaunch registration.launch
 
-3. run rosbag  
+2. run rosbag  
 rosbag play --clock [bag file]
 
 ## Change 3D reconstruction

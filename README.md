@@ -1,7 +1,7 @@
 # DecomBot
 # Basics and references
 ROS: http://wiki.ros.org/ROS/Tutorials  
-RTAB-Map ROS: http://wiki.ros.org/rtabmap_ros  
+RTAB-Map ros: http://wiki.ros.org/rtabmap_ros  
 PCL: https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html
 
 ## Setup

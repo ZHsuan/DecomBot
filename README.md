@@ -1,9 +1,5 @@
 # DecomBot
-# Basics and references
-ROS: http://wiki.ros.org/ROS/Tutorials  
-RTAB-Map ros: http://wiki.ros.org/rtabmap_ros  
-PCL: https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html
-
+# Run RTAB-Map with DecomBot bag file
 ## Setup
 ROS installation: http://wiki.ros.org/ROS/Installation  
 rtabmap-ros installation: https://github.com/introlab/rtabmap_ros
@@ -26,7 +22,7 @@ from start time: 1610938942 (  0s)
 Split bag file during 250s~550s (pipe):  
 rosbag filter [input.bag] [output.bag] "t.secs >= 1610939191 and t.secs <= 1610939492"
 
-## Run RTAB-Map with DecomBot bag file
+## Execute
 1. run RTAB-Map  
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
@@ -45,6 +41,7 @@ rosbag play --clock [bag file]
 ## Change 3D reconstruction
 rtabmap-databaseViewer ~/.ros/rtabmap.db
 
+
 # Discussion and problems
 1. accumulated errors
 Odometry errors will accumulate as time pass by, it may need other odometry methods or seperate a long process to several short ones.  
@@ -52,6 +49,13 @@ Odometry errors will accumulate as time pass by, it may need other odometry meth
 RTAB-Map will lose tracking in sometimes, causing 3D reconstruction stopped.
 3. meshing
 Meshing results depend on the parameters and methods. It can be improved by change paramters provided by RTAB-Map or use PCL.
+
+
+# Basics and references
+ROS: http://wiki.ros.org/ROS/Tutorials  
+RTAB-Map ros: http://wiki.ros.org/rtabmap_ros  
+PCL: https://pcl.readthedocs.io/projects/tutorials/en/latest/index.html
+
 
 
 

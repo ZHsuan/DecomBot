@@ -26,7 +26,7 @@ rosbag filter [input.bag] [output.bag] "t.secs >= 1610939191 and t.secs <= 16109
 1. run RTAB-Map with registration
 roslaunch rtabmap_registeration.launch
 
-(or run launch file seperately if needed)
+(or run launch file seperately if needed)  
 (1) run RTAB-Map  
 roslaunch rtabmap_ros rtabmap.launch \
     rtabmap_args:="--delete_db_on_start" \
@@ -35,7 +35,7 @@ roslaunch rtabmap_ros rtabmap.launch \
     camera_info_topic:=/camera/color/camera_info \
     approx_sync:=true \
     use_sim_time:=true
-(2) run registration   
+(2) run registration  
 roslaunch registration.launch
 
 2. run rosbag  

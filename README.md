@@ -34,7 +34,7 @@ roslaunch rtabmap_ros rtabmap.launch \
     rgb_topic:=/camera/color/image_raw \
     camera_info_topic:=/camera/color/camera_info \
     approx_sync:=true \
-    use_sim_time:=true
+    use_sim_time:=true  
 (2) run registration  
 roslaunch registration.launch
 
